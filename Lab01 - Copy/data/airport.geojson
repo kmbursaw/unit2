@@ -1,0 +1,749 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Hartsfield–Jackson Atlanta International Airport",
+        "Rank (2022)": 1,
+        "Pax_2013" : 45308407,
+        "Pax_2014" : 46604273,
+        "Pax_2015" : 49340732,
+        "Pax_2016" : 50501858,
+        "Pax_2017" : 50251964,
+        "Pax_2018" : 51865797,
+        "Pax_2019" : 53505795,
+        "Pax_2020" : 20559866,
+        "Pax_2021" : 36676010,
+        "Pax_2022" : 45396001
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.42927119,
+          33.63779875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Dallas/Fort Worth International Airport",
+        "Rank (2022)": 2,
+        "Pax_2013" : 29038128,
+        "Pax_2014" : 30804567,
+        "Pax_2015" : 31589839,
+        "Pax_2016" : 31283579,
+        "Pax_2017" : 31816933,
+        "Pax_2018" : 32821799,
+        "Pax_2019" : 35778573,
+        "Pax_2020" : 18593421,
+        "Pax_2021" : 30005266,
+        "Pax_2022" : 35345138
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.04652205,
+          32.89651945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Denver International Airport",
+        "Rank (2022)": 3,
+        "Pax_2013" : 25496885,
+        "Pax_2014" : 26000591,
+        "Pax_2015" : 26280043,
+        "Pax_2016" : 28267394,
+        "Pax_2017" : 29809097,
+        "Pax_2018" : 31362941,
+        "Pax_2019" : 33592945,
+        "Pax_2020" : 16243216,
+        "Pax_2021" : 28645527,
+        "Pax_2022" : 33773832
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.6853673,
+          39.8606676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "O'Hare International Airport",   
+        "Rank (2022)": 4,
+        "Pax_2013" : 32317835,
+        "Pax_2014" : 33843426,
+        "Pax_2015" : 36305668,
+        "Pax_2016" : 37589899,
+        "Pax_2017" : 38593028,
+        "Pax_2018" : 39873927,
+        "Pax_2019" : 40871223,
+        "Pax_2020" : 14606034,
+        "Pax_2021" : 26350976,
+        "Pax_2022" : 33120474
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90918177,
+          41.9780813
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Los Angeles International Airport",
+        "Rank (2022)": 5,
+        "Pax_2013" : 32425892,
+        "Pax_2014" : 34314197,
+        "Pax_2015" : 36351272,
+        "Pax_2016" : 39636042,
+        "Pax_2017" : 41232432,
+        "Pax_2018" : 42624050,
+        "Pax_2019" : 42939104,
+        "Pax_2020" : 14055777,
+        "Pax_2021" : 23663410,
+        "Pax_2022" : 32326616
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4213591,
+          33.94216755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "John F. Kennedy International Airport",
+        "Rank (2022)": 6,
+        "Pax_2013" : 25036358,
+        "Pax_2014" : 26244928,
+        "Pax_2015" : 27782369,
+        "Pax_2016" : 29239151,
+        "Pax_2017" : 29533154,
+        "Pax_2018" : 30620769,
+        "Pax_2019" : 31036655,
+        "Pax_2020" : 8269819,
+        "Pax_2021" : 15273342,
+        "Pax_2022" : 26919982
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.77937337,
+          40.6429479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Harry Reid International Airport",
+        "Rank (2022)": 7,
+        "Pax_2013" : 19946179,
+        "Pax_2014" : 20620248,
+        "Pax_2015" : 21857693,
+        "Pax_2016" : 22833267,
+        "Pax_2017" : 23364393,
+        "Pax_2018" : 23795012,
+        "Pax_2019" : 24728361,
+        "Pax_2020" : 10584059,
+        "Pax_2021" : 19160342,
+        "Pax_2022" : 25480500
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.1611198,
+          36.0861034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Orlando International Airport",
+        "Rank (2022)": 8,
+        "Pax_2013" : 16884524,
+        "Pax_2014" : 17278608,
+        "Pax_2015" : 18759938,
+        "Pax_2016" : 20283541,
+        "Pax_2017" : 21565448,
+        "Pax_2018" : 23202480,
+        "Pax_2019" : 24562271,
+        "Pax_2020" : 10467728,
+        "Pax_2021" : 19618838,
+        "Pax_2022" : 24469733
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3094431,
+          28.41290355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Miami International Airport",
+        "Rank (2022)": 9,
+        "Pax_2013" : 19420089,
+        "Pax_2014" : 19471466,
+        "Pax_2015" : 20986349,
+        "Pax_2016" : 20875813,
+        "Pax_2017" : 20709225,
+        "Pax_2018" : 21021640,
+        "Pax_2019" : 21421031,
+        "Pax_2020" : 8786007,
+        "Pax_2021" : 17500096,
+        "Pax_2022" : 23949892
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.28672341,
+          25.7949789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Charlotte Douglas International Airport",
+        "Rank (2022)": 10,
+        "Pax_2013" : 21346601,
+        "Pax_2014" : 21537725,
+        "Pax_2015" : 21913166,
+        "Pax_2016" : 21511880,
+        "Pax_2017" : 22011251,
+        "Pax_2018" : 22281949,
+        "Pax_2019" : 24199688,
+        "Pax_2020" : 12952869,
+        "Pax_2021" : 20900875,
+        "Pax_2022" : 23100300
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.94574352,
+          35.21074145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Seattle–Tacoma International Airport",
+        "Rank (2022)": 11,
+        "Pax_2013" : 16690295,
+        "Pax_2014" : 17888080,
+        "Pax_2015" : 20148980,
+        "Pax_2016" : 21887110,
+        "Pax_2017" : 22639124,
+        "Pax_2018" : 24024908,
+        "Pax_2019" : 25001762,
+        "Pax_2020" : 9462411,
+        "Pax_2021" : 17430195,
+        "Pax_2022" : 22157862
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3080159,
+          47.4475673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Phoenix Sky Harbor International Airport",
+        "Rank (2022)": 12,
+        "Pax_2013" : 19525109,
+        "Pax_2014" : 20344867,
+        "Pax_2015" : 21351504,
+        "Pax_2016" : 20896265,
+        "Pax_2017" : 21185458,
+        "Pax_2018" : 21622580,
+        "Pax_2019" : 22433552,
+        "Pax_2020" : 10531436,
+        "Pax_2021" : 18940287,
+        "Pax_2022" : 21852586
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0067915,
+          33.43284865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Newark Liberty International Airport",
+        "Rank (2022)": 13,
+        "Pax_2013" : 17546506,
+        "Pax_2014" : 17773405,
+        "Pax_2015" : 18684818,
+        "Pax_2016" : 19923009,
+        "Pax_2017" : 21571198,
+        "Pax_2018" : 22797602,
+        "Pax_2019" : 23160763,
+        "Pax_2020" : 7985474,
+        "Pax_2021" : 14514049,
+        "Pax_2022" : 21572147
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.17725485,
+          40.68906405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "San Francisco International Airport",
+        "Rank (2022)": 14,
+        "Pax_2013" : 21704626,
+        "Pax_2014" : 22770783,
+        "Pax_2015" : 24190560,
+        "Pax_2016" : 25707101,
+        "Pax_2017" : 26900048,
+        "Pax_2018" : 27790717,
+        "Pax_2019" : 27779230,
+        "Pax_2020" : 7745057,
+        "Pax_2021" : 11725347,
+        "Pax_2022" : 20411420
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3839894,
+          37.622452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "George Bush Intercontinental Airport",
+        "Rank (2022)": 15,
+        "Pax_2013" : 18952840,
+        "Pax_2014" : 19772087,
+        "Pax_2015" : 20595881,
+        "Pax_2016" : 20062072,
+        "Pax_2017" : 19603731,
+        "Pax_2018" : 21157398,
+        "Pax_2019" : 21905309,
+        "Pax_2020" : 8682558,
+        "Pax_2021" : 16242821,
+        "Pax_2022" : 19814052
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.33298596,
+          29.9841416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Logan International Airport",
+        "Rank (2022)": 16,
+        "Pax_2013" : 14810153,
+        "Pax_2014" : 15507561,
+        "Pax_2015" : 16290362,
+        "Pax_2016" : 17759044,
+        "Pax_2017" : 18759742,
+        "Pax_2018" : 20006521,
+        "Pax_2019" : 20699377,
+        "Pax_2020" : 6035452,
+        "Pax_2021" : 10909817,
+        "Pax_2022" : 17443775
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.01364006,
+          42.36317665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Fort Lauderdale–Hollywood International Airport",
+        "Rank (2022)": 17,
+        "Pax_2013" : 11538140,
+        "Pax_2014" : 12031860,
+        "Pax_2015" : 13061632,
+        "Pax_2016" : 14263270,
+        "Pax_2017" : 15817043,
+        "Pax_2018" : 17612331,
+        "Pax_2019" : 17950989,
+        "Pax_2020" : 8015744,
+        "Pax_2021" : 13598994,
+        "Pax_2022" : 15370165
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.15099673,
+          26.072017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Minneapolis–Saint Paul International Airport",
+        "Rank (2022)": 18,
+        "Pax_2013" : 16280835,
+        "Pax_2014" : 16972678,
+        "Pax_2015" : 17634273,
+        "Pax_2016" : 18123844,
+        "Pax_2017" : 18409704,
+        "Pax_2018" : 18361942,
+        "Pax_2019" : 19192917,
+        "Pax_2020" : 7069720,
+        "Pax_2021" : 12211409,
+        "Pax_2022" : 15242089
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.22092805,
+          44.87801905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "LaGuardia Airport",
+        "Rank (2022)": 19,
+        "Pax_2013" : 13372269,
+        "Pax_2014" : 13535372,
+        "Pax_2015" : 14319924,
+        "Pax_2016" : 14762593,
+        "Pax_2017" : 14614802,
+        "Pax_2018" : 15058501,
+        "Pax_2019" : 15393601,
+        "Pax_2020" : 4147116,
+        "Pax_2021" : 7827307,
+        "Pax_2022" : 14367463
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.87336399,
+          40.7757145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Detroit Metropolitan Airport",
+        "Rank (2022)": 20,
+        "Pax_2013" : 15683523,
+        "Pax_2014" : 15775941,
+        "Pax_2015" : 16255520,
+        "Pax_2016" : 16847135,
+        "Pax_2017" : 17036092,
+        "Pax_2018" : 17436837,
+        "Pax_2019" : 18143040,
+        "Pax_2020" : 6822324,
+        "Pax_2021" : 11517696,
+        "Pax_2022" : 13751197
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.35297538,
+          42.2056991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Philadelphia International Airport",
+        "Rank (2022)": 21,
+        "Pax_2013" : 14727945,
+        "Pax_2014" : 14792339,
+        "Pax_2015" : 15101349,
+        "Pax_2016" : 14564419,
+        "Pax_2017" : 14271243,
+        "Pax_2018" : 15292670,
+        "Pax_2019" : 16006389,
+        "Pax_2020" : 5753239,
+        "Pax_2021" : 9820222,
+        "Pax_2022" : 12421168
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.23521279,
+          39.875018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Salt Lake City International Airport",
+        "Rank (2022)": 22,
+        "Pax_2013" : 9668048,
+        "Pax_2014" : 10139065,
+        "Pax_2015" : 10634538,
+        "Pax_2016" : 11143738,
+        "Pax_2017" : 11615954,
+        "Pax_2018" : 12226730,
+        "Pax_2019" : 12840841,
+        "Pax_2020" : 5753239,
+        "Pax_2021" : 10795906,
+        "Pax_2022" : 12383843
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.9798985,
+          40.7900661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Ronald Reagan Washington National Airport",
+        "Rank (2022)": 23,
+        "Pax_2013" : 9838034,
+        "Pax_2014" : 10057794,
+        "Pax_2015" : 11242375,
+        "Pax_2016" : 11470854,
+        "Pax_2017" : 11506310,
+        "Pax_2018" : 11367176,
+        "Pax_2019" : 11595454,
+        "Pax_2020" : 3573489,
+        "Pax_2021" : 6731737,
+        "Pax_2022" : 11553850
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.03968894,
+          38.85128945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "San Diego International Airport",
+        "Rank (2022)": 24,
+        "Pax_2013" : 8878772,
+        "Pax_2014" : 9333152,
+        "Pax_2015" : 9985763,
+        "Pax_2016" : 10340164,
+        "Pax_2017" : 11139933,
+        "Pax_2018" : 12174224,
+        "Pax_2019" : 12648692,
+        "Pax_2020" : 4637856,
+        "Pax_2021" : 7836360,
+        "Pax_2022" : 11162224
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.1922464,
+          32.73336075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Baltimore/Washington International Airport",
+        "Rank (2022)": 25,
+        "Pax_2013" : 11132731,
+        "Pax_2014" : 11022200,
+        "Pax_2015" : 11738845,
+        "Pax_2016" : 12340972,
+        "Pax_2017" : 12976554,
+        "Pax_2018" : 13371816,
+        "Pax_2019" : 13284687,
+        "Pax_2020" : 5451355,
+        "Pax_2021" : 9253561,
+        "Pax_2022" : 11151169
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.67075506,
+          39.1747196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Tampa International Airport",
+        "Rank (2022)": 26,
+        "Pax_2013" : 8267752,
+        "Pax_2014" : 8531561,
+        "Pax_2015" : 9150458,
+        "Pax_2016" : 9194994,
+        "Pax_2017" : 9548580,
+        "Pax_2018" : 10368514,
+        "Pax_2019" : 10978756,
+        "Pax_2020" : 4966775,
+        "Pax_2021" : 8847197,
+        "Pax_2022" : 10539459
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53492762,
+          27.9791649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Austin–Bergstrom International Airport",
+        "Rank (2022)": 27,
+        "Pax_2013" :  4900959,
+        "Pax_2014" : 5219982,
+        "Pax_2015" : 5797547,
+        "Pax_2016" : 6095545,
+        "Pax_2017" : 6973115,
+        "Pax_2018" : 7921797,
+        "Pax_2019" : 8683711,
+        "Pax_2020" : 3141505,
+        "Pax_2021" : 6666215,
+        "Pax_2022" : 10382573
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.66500964,
+          30.19348925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Dulles International Airport",
+        "Rank (2022)": 28,
+        "Pax_2013" : 10570993,
+        "Pax_2014" : 10415948,
+        "Pax_2015" : 10363974,
+        "Pax_2016" : 10596942,
+        "Pax_2017" : 11024306,
+        "Pax_2018" : 11621623,
+        "Pax_2019" : 11884117,
+        "Pax_2020" : 3862658,
+        "Pax_2021" : 7227875,
+        "Pax_2022" : 10266324
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.45348491,
+          38.95226625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Nashville International Airport",
+        "Rank (2022)": 29,
+        "Pax_2013" : 5050989,
+        "Pax_2014" : 5396958,
+        "Pax_2015" : 5715205,
+        "Pax_2016" : 6338517,
+        "Pax_2017" : 6902771,
+        "Pax_2018" : 8017347,
+        "Pax_2019" : 8935654,
+        "Pax_2020" : 4013995,
+        "Pax_2021" : 7594049,
+        "Pax_2022" : 9829062
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.68308703,
+          36.11958985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Midway International Airport",
+        "Rank (2022)": 30,
+        "Pax_2013" : 9915646,
+        "Pax_2014" : 10311996,
+        "Pax_2015" : 10830850,
+        "Pax_2016" : 11044387,
+        "Pax_2017" : 10912074,
+        "Pax_2018" : 10678018,
+        "Pax_2019" : 10081781,
+        "Pax_2020" : 4236603,
+        "Pax_2021" : 7680617,
+        "Pax_2022" : 9650281
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.75084869,
+          41.7854316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airport": "Daniel K. Inouye International Airport",
+        "Rank (2022)": 31,
+        "Pax_2013" : 9466995,
+        "Pax_2014" : 9463000,
+        "Pax_2015" : 9656340,
+        "Pax_2016" : 9656340,
+        "Pax_2017" : 9743989,
+        "Pax_2018" : 9578505,
+        "Pax_2019" : 9988678,
+        "Pax_2020" : 3126391,
+        "Pax_2021" : 5830928,
+        "Pax_2022" : 8828395
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.9173135,
+          21.32040435
+        ]
+      }
+    }
+  ]
+}
