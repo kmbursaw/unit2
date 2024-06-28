@@ -30,11 +30,11 @@
     } 
 
     .legend-control-container {
-        width: 125px;
-        height: 125px;
+        width: 120px;
+        height: 97px;
         background-color: rgba(255,255,255,0.8);  
         padding: 0px;  
-        line-height: 10px;  
+        line-height: 5px;  
         text-align: center;  
         border: solid gray 1px;
     }
