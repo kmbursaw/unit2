@@ -16,11 +16,11 @@ function createMap(){
     });
 
     //add OSM base tilelayer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
         maxZoom: 20
-    
+
     }).addTo(map);
 
     //call getData function
@@ -38,20 +38,21 @@ function calcStats(data){
               //get population for current year
               var value = airport.properties["Pax_"+ String(year)];
               //add value to array
-              allValues.push(value);
+              if (!isNaN(value))
+                allValues.push(value);
         }
     }
 
     //get min, max, mean stats for our array
     dataStats.min = Math.min(...allValues);
     dataStats.max = Math.max(...allValues);
+
     //calculate meanValue
     var sum = allValues.reduce(function(a, b){return a+b;});
     dataStats.mean = sum/ allValues.length;
 
     //get minimum value of our array
     var minValue = Math.min(...allValues)
-
     //returns minValue from function
     return minValue;
 }
@@ -146,7 +147,7 @@ function createSequenceControls(attributes){
 
 
             //create range input element (slider)
-            container.insertAdjacentHTML('beforeend', '<input class="range-slider" type="range">')
+            container.insertAdjacentHTML('beforeend', '<input class="range-slider" type="range" min="0" max="9">')
 
             //forward and reverse buttons and their symbols
             //Right arrow from the Noun Project. Created By: Rainbow Designs
@@ -209,10 +210,10 @@ function createLegend(attributes){
 
 
             //PUT YOUR SCRIPT TO CREATE THE TEMPORAL LEGEND HERE
-            container.innerHTML = '<p class="temporalLegend">Passengers in <span class="year">2013</spand></p>'
+            container.innerHTML = '<p class="temporalLegend">Passengers in <span class="year">2013</span></p>'
 
             //Step 1: start attribute legend svg string
-            var svg = '<svg id="attribute-legend" width="160px" height=60px">';
+            var svg = '<svg id="attribute-legend" width="100" height="100">';
 
             //array of circle names to base loop on
             var circles = ["max", "mean", "min"];
@@ -227,13 +228,17 @@ function createLegend(attributes){
                 
                 //circle string
                 svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F47821" fill-opacity="0.8" stroke="#000000" cx="30"/>';
+            
+                console.log(circles[i]);
+
+                //evenly space out labels            
+                var textY = i * 20 + 20;            
+
+                //text string            
+                svg += '<text id="' + circles[i] + '-text" x="5" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " million" + '</text>';
+            
+            
             };
-
-            //evenly space out labels            
-            var textY = i * 20 + 20;            
-
-            //text string            
-            svg += '<text id="' + circles[i] + '-text" x="65" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " million" + '</text>';
 
 
             //close svg string
@@ -295,7 +300,7 @@ function updatePropSymbols(attribute){
             //add city to popup content string
             var popupContent = createPopupContent(props, attribute);    
 
-            var legend = createLegend(attributes);
+            
             //add formatted attribute to panel content string
             //var year = attribute.split("_")[1];
             //popupContent += "<p><b>Passengers in " + year + ":</b> " + props[attribute] + " million</p>";
