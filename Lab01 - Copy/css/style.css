@@ -39,3 +39,41 @@
         border: solid gray 1px;
     }
 
+
+
+/*background color*/
+body {
+    background-color: rgb(7, 11, 236);
+}
+
+/*headings*/
+h1{
+    font-size: 52px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke;
+    text-align: center;
+    font-style: italic;
+}
+
+/*paragraphy text*/
+p {
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+/*Images*/
+h1 img {
+    vertical-align: middle; /* Aligns image vertically with text */
+    margin-left: 10px; /* Optional: Adds spacing between text and image */
+    width: 50px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+}

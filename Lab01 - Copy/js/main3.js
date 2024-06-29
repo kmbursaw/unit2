@@ -4,6 +4,7 @@
 var map;
 var minValue;
 var attributes;
+var medium_airports = L.layerGroup();
 var dataStats = {};
 
 //step 1 create map
@@ -52,11 +53,13 @@ function createMap(){
         "Stadia_StamenToner": Stadia_StamenTonerBackground
     };
 
+    var overlayMaps = {
+        "Medium Airports": medium_airports
+    };
+
     OpenStreetMap.addTo(map);
 
-    L.control.layers(baseMaps).addTo(map);
-
-    //var layerControl = L.control.layers(baseMaps).addTo(map)
+    L.control.layers(baseMaps, overlayMaps).addTo(map);
 
     
 
@@ -73,7 +76,52 @@ function createMap(){
 
     //call getData function
     getData(map);
+    //getOtherData(map);
 };
+
+
+
+// Function to create markers for medium airports
+function createMarkers(data) {
+    // Clear existing markers if any
+    medium_airports.clearLayers();
+
+    // Loop through each feature in the GeoJSON data
+    data.features.forEach(function(feature) {
+        // Extract latitude and longitude from geometry
+        var lat = feature.geometry.coordinates[1];
+        var lng = feature.geometry.coordinates[0];
+
+        // Create marker with popup content
+        var marker = L.marker([lat, lng])
+            .bindPopup(createPopupContent(feature.properties));
+
+        // Add marker to layer group
+        medium_airports.addLayer(marker);
+    });
+
+    // Update layer control
+    updateLayerControl();
+}
+
+// Function to update the layer control with medium airports layer
+function updateLayerControl() {
+    // Add medium airports layer to overlay maps
+    var overlayMaps = {
+        "Medium Airports": medium_airports
+    };
+
+    // Update layer control with new overlay maps
+    layerControl.setOverlayLayers(overlayMaps);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -324,6 +372,28 @@ function createLegend(attributes){
 
 
 
+function updateLegend(attribute) {
+    document.querySelector(".temporalLegend .year").innerHTML = attribute.split("_")[1];
+
+
+    // Update circle sizes and text
+    var circles = ["max", "mean", "min"];
+    for (var i = 0; i < circles.length; i++) {
+        var radius = calcPropRadius(dataStats[circles[i]]);
+        document.getElementById(circles[i]).setAttribute("r", radius);
+        document.getElementById(circles[i]).setAttribute("cy", 59 - radius);
+
+        let numberInMillions = dataStats[circles[i]] / 1e6;
+
+        let formattedNumber = numberInMillions.toFixed(2);
+
+
+        //document.getElementById(circles[i] + "-text").textContent = Math.round(dataStats[circles[i]] * 100) / 100 + " million";
+        document.getElementById(circles[i] + "-text").textContent = formattedNumber + " mil";
+    }
+}
+
+
 //builds an attributes array from the json data. renames json variable as data for this function
 function processData(data){
     //empty array to hold attributes
@@ -344,6 +414,8 @@ function processData(data){
 
     return attributes;
 };
+
+
 
 
 
@@ -374,6 +446,8 @@ function updatePropSymbols(attribute){
             popup.setContent(popupContent).update();
         };
     });
+    // Update the legend with the new attribute values
+    updateLegend(attribute);  
 };
 
 /*
@@ -424,5 +498,21 @@ function getData(){
             updatePropSymbols(attributes[initialYearIndex]);
         })
 };
+
+/*
+function getOtherData(){
+    //load the data
+    fetch("data/medium_airports.geojson")
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(json){
+            //fill medium_airports vairable with array from json file
+            createMarkers(json);
+        })
+}
+
+console.log(medium_airports);
+*/
 
 document.addEventListener('DOMContentLoaded',createMap)
