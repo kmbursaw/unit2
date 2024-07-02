@@ -5,6 +5,7 @@ var map;
 var minValue;
 var attributes;
 var medium_airports = L.layerGroup();
+var layerControl;
 var dataStats = {};
 
 //step 1 create map
@@ -33,12 +34,6 @@ function createMap(){
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
     });
     
-    var Stadia_StamenTonerBackground = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_background/{z}/{x}/{y}{r}.{ext}', {
-        minZoom: 0,
-        maxZoom: 20,
-        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        ext: 'png'
-    });
 
     var OpenStreetMap = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -46,20 +41,30 @@ function createMap(){
         maxZoom: 20
     });
     
+    var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {
+        minZoom: 0,
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        ext: 'png'
+    });
+
+
 
     var baseMaps = {
         "OpenStreetMap": OpenStreetMap,
         "OpenStreetMapHOT": OpenStreetMap_HOT,
-        "Stadia_StamenToner": Stadia_StamenTonerBackground
+        "Smooth Dark": Stadia_AlidadeSmoothDark,
     };
 
     var overlayMaps = {
         "Medium Airports": medium_airports
     };
 
+    console.log(overlayMaps);
+
     OpenStreetMap.addTo(map);
 
-    L.control.layers(baseMaps, overlayMaps).addTo(map);
+    layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
     
 
@@ -76,7 +81,7 @@ function createMap(){
 
     //call getData function
     getData(map);
-    //getOtherData(map);
+    getOtherData(map);
 };
 
 
@@ -99,7 +104,6 @@ function createMarkers(data) {
         // Add marker to layer group
         medium_airports.addLayer(marker);
     });
-
     // Update layer control
     updateLayerControl();
 }
@@ -499,7 +503,7 @@ function getData(){
         })
 };
 
-/*
+
 function getOtherData(){
     //load the data
     fetch("data/medium_airports.geojson")
@@ -508,11 +512,10 @@ function getOtherData(){
         })
         .then(function(json){
             //fill medium_airports vairable with array from json file
+            //L.geoJson(json).addTo(map);
             createMarkers(json);
         })
 }
 
-console.log(medium_airports);
-*/
 
 document.addEventListener('DOMContentLoaded',createMap)
