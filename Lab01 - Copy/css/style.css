@@ -43,8 +43,10 @@
 
 /*background color*/
 body {
-    background-color: rgb(7, 11, 236);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 48%, rgba(8,26,132,1) 100%, rgba(0,212,255,1) 100%);
 }
+
 
 /*headings*/
 h1{
@@ -64,7 +66,7 @@ h2{
 }
 
 /*paragraphy text*/
-p {
+.p1 {
     font-size: 18px;
     font-family:Arial, Helvetica, sans-serif;
     color: whitesmoke;
