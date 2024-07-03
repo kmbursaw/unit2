@@ -135,32 +135,23 @@ function updateLayerControl() {
 //calculate minimum values of each property. Changed from calculateMinValue
 function calcStats(data){
     //create empty array to store all data values
-    var allValues = [];
-    //loop through each city
-    for(var airport of data.features){
-        //loop through each year
-        for(var year = 2013; year <= 2022; year++){
-              //get population for current year
-              var value = airport.properties["Pax_"+ String(year)];
-              //add value to array
-              if (!isNaN(value))
-                allValues.push(value);
+    var attributes = []; // Array to store attributes
+    for (var year = 2013; year <= 2022; year++) {
+        var yearValues = [];
+        for (var airport of data.features) {
+            var value = airport.properties["Pax_" + year];
+            if (!isNaN(value)) {
+                yearValues.push(value);
+            }
         }
+        dataStats["Pax_" + year] = {
+            min: Math.min(...yearValues),
+            max: Math.max(...yearValues),
+            mean: yearValues.reduce((a, b) => a + b, 0) / yearValues.length 
+        };
+        attributes.push("Pax_" + year);
     }
-    console.log(allValues);
-    //get min, max, mean stats for our array
-    dataStats.min = Math.min(...allValues);
-    dataStats.max = Math.max(...allValues);
-
-    console.log(dataStats.max)
-    //calculate meanValue
-    var sum = allValues.reduce(function(a, b){return a+b;});
-    dataStats.mean = sum/ allValues.length;
-
-    //get minimum value of our array
-    var minValue = Math.min(...allValues)
-    //returns minValue from function
-    return minValue;
+    return attributes; // Return the array of attributes
 }
 
 
@@ -338,8 +329,8 @@ function createLegend(attributes){
             for (var i=0; i<circles.length; i++){
                 
                 //Step 3: assign the r and cy attributes  
-                var radius = calcPropRadius(dataStats[circles[i]]);  
-                var cy = 59 - radius; 
+                var radius = calcPropRadius(dataStats[attributes[0]][circles[i]]);  
+                var cy = 59 - radius;  
                 
                 
                 //circle string
@@ -350,7 +341,7 @@ function createLegend(attributes){
                 //evenly space out labels            
                 var textY = i * 20 + 20;     
                 
-                let numberInMillions = dataStats[circles[i]] / 1e6;
+                let numberInMillions = dataStats[attributes[0]][circles[i]] / 1e6;
 
                 let formattedNumber = numberInMillions.toFixed(2);
 
@@ -386,16 +377,12 @@ function updateLegend(attribute) {
     // Update circle sizes and text
     var circles = ["max", "mean", "min"];
     for (var i = 0; i < circles.length; i++) {
-        var radius = calcPropRadius(dataStats[circles[i]]);
+        var radius = calcPropRadius(yearStats[circles[i]]); // Use yearStats
         document.getElementById(circles[i]).setAttribute("r", radius);
         document.getElementById(circles[i]).setAttribute("cy", 59 - radius);
 
-        let numberInMillions = dataStats[circles[i]] / 1e6;
-
+        let numberInMillions = yearStats[circles[i]] / 1e6; // Use yearStats
         let formattedNumber = numberInMillions.toFixed(2);
-
-
-        //document.getElementById(circles[i] + "-text").textContent = Math.round(dataStats[circles[i]] * 100) / 100 + " million";
         document.getElementById(circles[i] + "-text").textContent = formattedNumber + " mil";
     }
 }
@@ -428,9 +415,7 @@ function processData(data){
 
 //resize proportional symbols according to new attribute values
 function updatePropSymbols(attribute){
-    console.log(attribute);
     var year = attribute.split("_")[1];
-    console.log(year);
         //update temporal legend
         document.querySelector("span.year").innerHTML = year;
     map.eachLayer(function(layer){
@@ -485,13 +470,13 @@ function getData(){
         })
         .then(function(json){
             //fill attributes variable with array from json file
-            attributes = processData(json); //var removed
+            attributes = calcStats(json); //var removed
             //calculate minimum data value
-            minValue = calcStats(json);
-            console.log(minValue);
-            // Determine initial year index
+            minValue = dataStats[attributes[0]].min;
+
+            // Determine initial year index (assuming attributes are sorted by year)
             var initialYearIndex = attributes.findIndex(function(attr) {
-                return attr.endsWith('_2013');
+                return attr.endsWith('_2013'); // Adjust logic based on your attribute naming convention
             });
 
             //call function to create proportional symbols
@@ -503,12 +488,11 @@ function getData(){
             // Set initial value of range slider
             document.querySelector('.range-slider').value = initialYearIndex;
             
-            console.log(attributes);
             // Update proportional symbols based on initial attribute
             updatePropSymbols(attributes[initialYearIndex]);
-            //console.log(updatePropSymbols(attributes[initialYearIndex]));
         })
 };
+
 
 /*
 function getOtherData(){
