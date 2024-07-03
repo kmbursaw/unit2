@@ -1,6 +1,6 @@
 //Created by Kevin M Bursaw for GEOG 575 at Unversity of Wisconsin-Madison
 
-//declare map variable globally so all functions have access
+//declare certain variables globally so all functions have access
 var map;
 var minValue;
 var attributes;
@@ -8,16 +8,19 @@ var medium_airports = L.layerGroup();
 var layerControl;
 var dataStats = {};
 
-//step 1 create map
+//create map
 function createMap(){
 
     
     //create the map
     map = L.map('map', {
-        center: [35.50, -110.35],
+        center: [41.50, -110.35],
         zoom: 3
     });
     
+    //center: [35.50, -110.35],
+
+
     /*
     //add OSM base tilelayer
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
@@ -28,7 +31,7 @@ function createMap(){
     }).addTo(map);
     */
     
-
+    //three different map options
     var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
@@ -49,93 +52,72 @@ function createMap(){
     });
 
 
-
+    //sets basemap options for user to choose from
     var baseMaps = {
         "OpenStreetMap": OpenStreetMap,
         "OpenStreetMapHOT": OpenStreetMap_HOT,
         "Smooth Dark": Stadia_AlidadeSmoothDark,
     };
 
+    //sets overlay options for user to choose from
     var overlayMaps = {
         "Medium Airports": medium_airports
     };
 
-    //console.log(overlayMaps);
-
+    //adds starting base tileset to map
     OpenStreetMap.addTo(map);
 
+    //adds addtional base tilesets and overlays to map
     layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
-    
-
-
-    /*
-    //add OSM base tilelayer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 20
-
-    }).addTo(map);
-    */
 
     //call getData function
     getData(map);
-    //getOtherData(map);
+    getOtherData(map);
 };
 
 
-/*
-// Function to create markers for medium airports
+
+//Function to create markers for medium airports
 function createMarkers(data) {
-    // Clear existing markers if any
+    //Clear existing markers if any
     medium_airports.clearLayers();
 
-    // Loop through each feature in the GeoJSON data
+    //Loop through each feature in the GeoJSON data
     data.features.forEach(function(feature) {
-        // Extract latitude and longitude from geometry
+        //Extract latitude and longitude from geometry
         var lat = feature.geometry.coordinates[1];
         var lng = feature.geometry.coordinates[0];
 
-        // Create marker with popup content
+        //Create marker with popup content of medium airport name
         var marker = L.marker([lat, lng])
-            .bindPopup(createPopupContent(feature.properties));
+            .bindPopup(feature.properties["Airports (medium)"]);
 
-        // Add marker to layer group
+        //Add marker to layer group
         medium_airports.addLayer(marker);
     });
-    // Update layer control
+    //Update layer control
     updateLayerControl();
 };
-    */
 
-// Function to update the layer control with medium airports layer
+
+//Function to update the layer control with medium airports layer
 function updateLayerControl() {
-    // Add medium airports layer to overlay maps
+    //Add medium airports layer to overlay maps
     var overlayMaps = {
         "Medium Airports": medium_airports
     };
 
-    // Update layer control with new overlay maps
+    //Update layer control with new overlay maps
     layerControl.setOverlayLayers(overlayMaps);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 //calculate minimum values of each property. Changed from calculateMinValue
 function calcStats(data){
     //create empty array to store all data values
-    var attributes = []; // Array to store attributes
+    var attributes = []; 
+    //loop through years to gather passenger properties and store in variable yearValues. Also checks if NaN.
     for (var year = 2013; year <= 2022; year++) {
         var yearValues = [];
         for (var airport of data.features) {
@@ -144,6 +126,7 @@ function calcStats(data){
                 yearValues.push(value);
             }
         }
+        //Caclulates the max, mean, and min values per year and pushes them to the array
         dataStats["Pax_" + year] = {
             min: Math.min(...yearValues),
             max: Math.max(...yearValues),
@@ -151,7 +134,8 @@ function calcStats(data){
         };
         attributes.push("Pax_" + year);
     }
-    return attributes; // Return the array of attributes
+    //return the array of attributes
+    return attributes;
 }
 
 
@@ -176,6 +160,7 @@ function createPopupContent(properties, attribute){
     //popupContent += "<p><b>Airport:</b> " + feature.properties.Airport + "</p><p><b>" + attribute + ":</b> " + feature.properties[attribute] + " Passengers" + "</p>";
     popupContent += "<p><b>" + year + ":</b> " + properties[attribute] + " Passengers</p>";
 
+    //returns popupContent
     return popupContent;
 };
 
@@ -269,8 +254,8 @@ function createSequenceControls(attributes){
     });
 
     map.addControl(new SequenceControl());    
-    // add listeners after adding control
-    //Step 5: click listener for buttons
+    //add listeners after adding control
+    //click listener for buttons
     document.querySelectorAll('.step').forEach(function(step){
         step.addEventListener("click", function(){
             var index = document.querySelector('.range-slider').value;
@@ -312,23 +297,23 @@ function createLegend(attributes){
         },
 
         onAdd: function () {
-            // create the control container with a particular class name
+            //create the control container with a particular class name
             var container = L.DomUtil.create('div', 'legend-control-container');
 
 
-            //PUT YOUR SCRIPT TO CREATE THE TEMPORAL LEGEND HERE
+            //creates containter for temporal legend
             container.innerHTML = '<p class="temporalLegend">Passengers in <span class="year">2013</span></p>'
 
-            //Step 1: start attribute legend svg string
+            //start attribute legend svg string
             var svg = '<svg id="attribute-legend" width="115" height="115">';
 
             //array of circle names to base loop on
             var circles = ["max", "mean", "min"];
 
-            //Step 2: loop to add each circle and text to svg string
+            //loop to add each circle and text to svg string
             for (var i=0; i<circles.length; i++){
                 
-                //Step 3: assign the r and cy attributes  
+                //assign the r and cy attributes  
                 var radius = calcPropRadius(dataStats[attributes[0]][circles[i]]);  
                 var cy = 59 - radius;  
                 
@@ -336,7 +321,7 @@ function createLegend(attributes){
                 //circle string
                 svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F47821" fill-opacity="0.8" stroke="#000000" cx="30"/>';
             
-                console.log(circles[i]);
+
 
                 //evenly space out labels            
                 var textY = i * 20 + 20;     
@@ -364,17 +349,20 @@ function createLegend(attributes){
             return container;
         }
     });
-
+    //adds legend control to map
     map.addControl(new LegendControl());
 };
 
 
-
+//function to update the legend with the temporal change induced by the temporal slider
 function updateLegend(attribute) {
     document.querySelector(".temporalLegend .year").innerHTML = attribute.split("_")[1];
 
+    //Access year-specific dataStats
+    var yearStats = dataStats[attribute]; 
 
-    // Update circle sizes and text
+
+    //Update circle sizes and text
     var circles = ["max", "mean", "min"];
     for (var i = 0; i < circles.length; i++) {
         var radius = calcPropRadius(yearStats[circles[i]]); // Use yearStats
@@ -403,8 +391,6 @@ function processData(data){
             attributes.push(attribute);
         };
     };
-
-
 
     return attributes;
 };
@@ -444,20 +430,6 @@ function updatePropSymbols(attribute){
     updateLegend(attribute);  
 };
 
-/*
-attributes.features.sort(function (a, b) {
-    var attA = Number(a.properties[attribute]);
-    var attB = Number(b.properties[attribute]);
-    return attB - attA;
-});
-
-// Step 2: Assign ranks to features
-data.features.forEach(function(feature, index) {
-    // Add a new property 'rank' to each feature
-    feature.properties.rank = index + 1; // Ranks will be 1 to 31
-});
-*/
-
 
 
 
@@ -490,23 +462,27 @@ function getData(){
             
             // Update proportional symbols based on initial attribute
             updatePropSymbols(attributes[initialYearIndex]);
+
+            //medium_airports.addTo(map); // Add this line to add the layer to the map
         })
 };
 
 
-/*
+
 function getOtherData(){
     //load the data
-    fetch("data/medium_airports.geojson")
+    fetch("data/medium_airportsv2.geojson")
         .then(function(response){
             return response.json();
         })
         .then(function(json){
             //fill medium_airports vairable with array from json file
             //L.geoJson(json).addTo(map);
-            //createMarkers(json);
+            createMarkers(json);
+            medium_airports.addTo(map); // Add this line to add the layer to the map
+
         })
 }
-*/
+
 
 document.addEventListener('DOMContentLoaded',createMap)
