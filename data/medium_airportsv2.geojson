@@ -1,0 +1,447 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Dallas Love Field"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.84732188,
+          32.84524055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Portland International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5927798,
+          45.5871326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "St. Louis Lambert International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.37047025,
+          38.74962725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "William P. Hobby Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.27693031,
+          29.64714905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Sacramento International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.5903701,
+          38.68722345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Louis Armstrong New Orleans International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.2558261,
+          29.9962412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Raleigh–Durham International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.78723822,
+          35.88036145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Norman Y. Mineta San José International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9293365,
+          37.3633299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "John Wayne Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.8412554,
+          33.7034707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "San Francisco Bay Oakland International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2170166,
+          37.72225915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Southwest Florida International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.75880563,
+          26.53294975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Luis Muñoz Marín International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.99743037,
+          18.44319945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Kansas City International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.72118992,
+          39.3023103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "San Antonio International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.46921443,
+          29.5334021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Cleveland Hopkins International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.85110104,
+          41.40645365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Indianapolis International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.29508389,
+          39.7162533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Kahului Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.4602843,
+          20.876488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Pittsburgh International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2599138,
+          40.49632445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Cincinnati/Northern Kentucky International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.66515749,
+          39.04990645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "John Glenn Columbus International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.89304061,
+          39.99705605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Palm Beach International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.09248651,
+          26.6859478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Jacksonville International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.69303816,
+          30.49375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Hollywood Burbank Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.353505,
+          34.1929507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Bradley International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.68501994,
+          41.9405835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Ontario International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.5991577,
+          34.05414245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Milwaukee Mitchell International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.89725779,
+          42.9465423
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Charleston International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.03946503,
+          32.89929845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Ted Stevens Anchorage International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.9978919,
+          61.18103525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Albuquerque International Sunport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.6109675,
+          35.03766945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Boise Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.2078225,
+          43.55988165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Eppley Airfield"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.8982299,
+          41.2980122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Memphis International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.97689467,
+          35.04625645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Richmond International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.32148389,
+          37.5069667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Airports (medium)": "Reno–Tahoe International Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.7733319,
+          39.4986462
+        ]
+      }
+    }
+  ]
+}

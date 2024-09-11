@@ -1,0 +1,88 @@
+/*Add CSS styles here*/
+#map {    
+    height: 400px;    
+    width: 100%;
+    display: inline-block;
+    }
+
+    .sequence-control-container {  
+        width: 250px;  
+        height: 30px;  
+        background-color: rgba(255,255,255,0.8);  
+        padding: 10px;  
+        line-height: 45px;  
+        text-align: center;  
+        border: solid gray 1px;  
+    }  
+    
+    .range-slider {  
+        width: 150px;
+        
+    }  
+    
+    .step {  
+        width: 40px;  
+    }  
+    
+    .step img {  
+        width: 100%;  
+        height: auto;  
+    } 
+
+    .legend-control-container {
+        width: 110px;
+        height: 97px;
+        background-color: rgba(255,255,255,0.8);  
+        padding: 0px;  
+        line-height: 5px;  
+        text-align: center;  
+        border: solid gray 1px;
+    }
+
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/*background color*/
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 48%, rgba(8,26,132,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+
+
+/*headings*/
+h1{
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    font-style: italic;
+}
+
+/*paragraph text*/
+.p1 {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.p2 {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
